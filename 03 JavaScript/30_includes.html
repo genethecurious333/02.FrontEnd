@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>includes()함수</title>
+    <script>
+        const fruits1 = ["달기", "바나나", "파인애플"];
+        const fruits2 = ["바나나", "딸기", "키위", "참외"];
+        let fruits3 = [...fruits1];
+
+        fruits2.map((fruit) => {
+            if (!fruits3.includes(fruit)) {   
+                fruits3.push(fruit);
+            }
+        });
+        
+        document.write(fruits3);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

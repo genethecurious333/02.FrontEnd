@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운터 만들기</title>
+</head>
+<body>
+    <h2>현재 숫자: <span id = "count">0</span></h2>
+    <button id="increase">증가</button>
+    <button id="decrease">감소</button>
+    <button id="reset">초기화</button>
+
+    <script>
+        let count = 0;
+        const countE1 = document.getElementById("count");
+        const increaseBtn = document.getElementById("increase");
+        const decreaseBtn = document.getElementById("decrease");
+        const resetBtn = document.getElementById("reset");
+
+        console.log(countE1);
+        console.log(increase);
+        console.log(decrease);
+        console.log(reset);
+
+        increaseBtn.addEventListener('click', ()=> {
+            count++;
+            countE1.textContent = count;
+        })
+
+        decreaseBtn.addEventListener('click', ()=> {
+            count--;
+            countE1.textContent = count;
+        })
+
+        resetBtn.addEventListener('click', ()=> {
+            count = 0;
+            countE1.textContent = count;
+        })        
+        
+    </script>
+        
+</body>
+</html>

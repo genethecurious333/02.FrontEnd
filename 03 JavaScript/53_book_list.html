@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카카오 도서 검색 API</title>
+    <link rel="stylesheet" href="./css/style-book.css">
+    <!-- ./ 는 현재 폴더, ../는 상위폴더 -->
+</head>
+<body>
+    <div class="search-container">
+        <h1>📚도서 검색 서비스</h1>
+        <div class="search-box">
+            <!-- event.keyCode=13에서 13은 enter를 누른다는 뜻  -->
+            <input type="text" id="searchInput" placeholder="검색할 도서명을 입력하세요..." onkeypress="if(event.keyCode==13) searchBooks()">
+            <button id="searchBtn" onclick="searchBooks()">검색</button>
+        </div>
+    </div>
+    <div id="bookList" class="book-list"></div>
+    <script src="./js/script-book.js"></script>
+</body>
+</html>

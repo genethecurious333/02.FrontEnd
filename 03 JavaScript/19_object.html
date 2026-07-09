@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 생성하기</title>
+    <script>
+        const tv = new Object();
+        tv.color = "white";
+        tv.price = 3000;
+        tv.info = function(){
+            document.write("tv 색상: ", this.color, "<br>");
+            document.write("tv 가격: ", this.price, "<br>");
+        }
+
+        const car = {
+            color: "black",
+            price: 5000,
+            info: function(){
+                document.write("car 색상:", this.color, "<br>");
+                document.write("car 가격:", this.price, "<br>");
+            }
+        }
+
+        document.write("<h1>tv 객체 메서드 호출</h1>");
+        tv.info();
+
+        document.write("<h1>car 객체 메서드 호출</h1>");
+        car.info();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

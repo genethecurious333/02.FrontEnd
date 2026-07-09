@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>특정일까지의 일수구하기</title>
+    <script>
+        const today = new Date();
+        const nowYear = today.getFullYear();
+        
+        const theDay = new Date(nowYear, 11, 31);
+        const diffdate = theDay.getTime() - today.getTime();
+        console.log(diffdate);
+        const result = Math.ceil(diffdate / (1000 * 60 * 60 * 24));
+        console.log(result);
+
+        document.write("<h1>연말까지 ", result,"일남았습니다.");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

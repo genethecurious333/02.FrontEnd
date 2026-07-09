@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문(for..of / for.. in)</title>
+    <script>
+        const fruits = ["사과", "키위", "참외", "수박"]; // 배열
+        console.log(fruits);
+
+        for (const fruit of fruits){
+            console.log(fruit);
+        }
+        
+        console.log("--------------");
+        
+        for (const index in fruits){
+            console.log(index);
+            console.log(fruits[index]);
+        }
+        
+        console.log("----------------");
+        
+        // for.. in 구문은 객체순회에서 사용하세요.
+        const person = {
+            name: "홍길동", 
+            age: 28, 
+            job: "개발자"
+        }
+
+        for (const key in person) {
+            console.log(key + ":" + person[key]);
+        }
+
+    </script>
+</head>
+<body>
+    <h1>개발자 모드에서 확인하세요</h1>
+</body>
+</html>

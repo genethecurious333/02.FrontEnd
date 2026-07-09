@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자 객체</title>
+    <script>
+        const userEmail = prompt("당신의 이메일주소는?")
+        const arrUrl = [".co.kr", ".com", ".net", ".org", ".or.kr", "go.kr"];
+
+        let check1 = false;
+        let check2 = false;
+
+        console.log(userEmail);
+        console.log("userEmail.indexOf('@')====>", userEmail.indexOf('@'));
+
+        if (userEmail.indexOf('@') > 0) {
+            check1 = true;
+            console.log(check1);
+        }
+
+        for (let i = 0; i < arrUrl.length; i++){
+            if (userEmail.indexOf(arrUrl[i]) > 0) {
+              check2 = true;
+              console.log(userEmail.indexOf(arrUrl[i]));
+            }
+        }
+
+        if (check1 && check2) {
+            document.write(userEmail);
+        }else {
+            alert("이메일형식이 잘못되었습니다.")
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

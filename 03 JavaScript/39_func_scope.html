@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 스코프(유효 범위)</title>
+    <script>
+        let num = 100;
+        function menu() {
+            num += 100;
+            alert(num);
+        }
+
+        menu();
+
+        function menu() {
+            alert(num);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

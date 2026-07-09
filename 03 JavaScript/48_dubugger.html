@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디버깅 사례</title>
+    <script>
+        // 함수
+        function calculateTotal(items) {
+            let total = 0;
+
+            for (item of items) {
+                debugger;
+                total += item.price;
+                console.log(`현재합계: ${total}`);
+            }
+            return total;                
+        }
+        
+        // 배열 생성
+        product = [
+            {name: "에어컨", price: 200000},
+            {name: "선풍기", price: 10000}
+        ];
+
+        // 함수 호출
+        console.log('총합계:', calculateTotal(product));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

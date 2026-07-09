@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #fff; 
+    font-size: 120px;
+    text-shadow: 2px 3px 0 #000;
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+}
+
+#contents {
+    background: url("../images/bg.jpg");
+    /* ../ 폴더에서 한단계위로 올라가라 */
+    background-size: cover;
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+}

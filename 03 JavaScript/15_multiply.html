@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <script>
+       let output = "";
+
+        console.log("=== 구구단 (2단 ~ 9단) ===\n");
+        
+        for (let dan = 2; dan <=9; dan++) {
+            console.log(`📱 ${dan}단`);
+            output += `📱 ${dan}단 <br>`;
+            
+            for (let i =1; i <= 9 ; i++) {
+            console.log(`${dan} x ${i} = ${dan * i}`);
+            output += `${dan} x ${i} = ${dan * i} <br>`;
+            }
+             
+            console.log(""); //단 사이에 빈 줄 추가
+            output += "<br>";
+        }
+        
+        document.write(output);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

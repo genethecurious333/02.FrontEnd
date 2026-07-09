@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록 레벨 scope</title>
+    <script>
+        let num = 10;
+        let user = "홍길동";
+
+        if (num > 5) {
+            let num = 50;
+            num+= 10;
+        }
+        console.log("num =>", num);
+
+        if (user) {
+            user = "김길동"
+        }
+        console.log("user =>", user)
+        document.write("개발자 모드로 확인하세요.")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

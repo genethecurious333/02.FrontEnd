@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map() Method의 활용</title>
+    <script>
+        const arr1 = [10, 20, 30];
+        const arr2 = arr1.map((item)=>(item / 10));
+        console.log(arr2);
+
+        const arr3 = ["홍길동", "홍길순", "박길동"];
+        const arr4 = arr3.map((name, index) => {
+            let obj = {};
+            obj["no"] = index + 1;
+            obj["userName"] = name;
+            return obj;
+        });
+
+        console.log(arr4);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

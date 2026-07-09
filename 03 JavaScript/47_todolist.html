@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <style>
+        .done{
+            text-decoration: line-through;
+            color: #888;
+        }
+        li{
+            line-height: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>나의 할 일 목록</h1>
+    <div>
+        <input type="text" id = "todoInput" placeholder= "할일을 입력하세요">
+        <button id="addBtn">추가</button>
+    </div>
+    <ul id="todolist">
+
+    </ul>
+
+    <script>
+        const todoInput = document.getElementById('todoInput');
+        const addBtn = document.getElementById('addBtn');
+        const todolist = document.getElementById('todolist');
+
+        let todos = [];
+
+        // 할 일을 추가하는 함수
+        function addTodo(){
+            const text = todoInput.value.trim();
+
+            if (text === '') {
+                alert("할 일을 추가하세요")
+                return;
+            };
+
+            const todo = {
+                id: Date.now(),
+                text: text,
+                completed: false 
+            };
+
+            todos.push(todo);     // 배열에 할일을 추가하기
+            renderTodos();        // 화면에 표시하는 함수
+            todoInput.value = ""; // 입력창 초기화
+                   
+        };
+
+        // 할 일 목록을 화면에 그리는 함수
+        function renderTodos() {
+            
+            todolist.innerHTML = '';
+            
+            todos.forEach(todo => {
+                const li = document.createElement("li")
+                li.innerHTML = `
+                <span class = "${todo.completed? 'done':''}">${todo.text}</span>
+                <button class="complete-btn">${todo.completed? '취소': '완료'}</button>
+                <button class="delete-btn">삭제</button>`;
+        
+                // 버튼에 이벤트 추가하기
+                // 완료 버튼
+                li.querySelector('.complete-btn').addEventListener('click',()=>{todo.completed = !todo.completed;
+                renderTodos();
+                });
+
+                // 삭제 버튼
+                li.querySelector('.delete-btn').addEventListener('click',()=> {todos = todos.filter(t => t.id !== todo.id);
+                renderTodos();
+                });
+
+            todolist.appendChild(li); // <li>추가
+            });
+        }
+            
+
+        todoInput.addEventListener('keypress', (e) => {
+            if (e.key === "Enter"){
+                addTodo();
+            }
+        });
+
+        addBtn.addEventListener('click', addTodo);
+
+        // 초기 렌더링
+        renderTodos();
+
+    </script>
+
+
+</body>
+
+</html>

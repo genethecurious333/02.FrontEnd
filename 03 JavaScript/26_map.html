@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <script>
+        const country = ["영어", "중국어"];
+        const subjects = ["쓰기", "말하기"];
+        const myMap = new Map();
+
+        for (let i=0; i<country.length; i++) {
+            myMap.set(country[i], []);
+            for (let j=0; j<subjects.length; j++) {
+                myMap.get(country[i]).push(
+                    prompt(`${country[i]}에 ${subjects[j]}의 점수는?`)
+                )
+            }
+        }
+
+        console.log(myMap.get("영어"));
+        console.log(myMap.get("중국어"));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

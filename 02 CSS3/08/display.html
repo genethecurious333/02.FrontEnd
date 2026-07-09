@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS display 속성</title>
+  <style>
+    /* 링크 줄 없애기 */
+    a {
+      text-decoration: none;
+    }
+
+    nav> ul {
+      list-style: none;
+    }
+
+    nav > ul > li {
+      width: 100px;
+      height: 40px;
+      border: 2px solid #222;
+      text-align: center;
+      line-height: 40px;
+      display: inline-block;
+      margin: 10px;
+    }
+  </style>
+  
+</head>
+<body>
+   <nav>
+     <ul>
+      <li><a href="#">메뉴 1</a></li>
+      <li><a href="#">메뉴 2</a></li>
+      <li><a href="#">메뉴 3</a></li>
+      <li><a href="#">메뉴 4</a></li>
+     </ul>
+   </nav>
+</body>
+</html>

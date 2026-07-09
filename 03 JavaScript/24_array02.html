@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열의 Method</title>
+    <script>
+        const greenArr = ["교대", "방배", "강남"];
+        const yellowArr = ["미금", "정자", "수서"];
+
+        console.log(greenArr);
+        console.log(yellowArr);
+
+        greenArr.splice(2, 1, "서초", "역삼");
+        console.log(greenArr);
+
+        const data1 = yellowArr.pop();
+        const data2 = yellowArr.shift();
+        console.log(data1, data2, yellowArr);
+
+        yellowArr.push(data2);
+        console.log(yellowArr);
+
+        yellowArr.unshift(data1);
+        console.log(yellowArr);
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

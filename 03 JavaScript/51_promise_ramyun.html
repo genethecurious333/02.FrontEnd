@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라면 만들기에 promise를 사용</title>
+    <script>
+        // 라면 장보기 성공했을 때
+        const cart = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                console.log("1. 라면 장보기");
+                console.log("2. 라면 물 끓이기");
+                resolve("라면 장보기 완료")
+            }, 1000);    
+        });
+
+        cart.then((result) => {
+            console.log(result);
+            console.log("3. 끊는 물에 라면, 스프 넣고 익히기");
+            console.log("4. 라면 먹기");
+        });
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

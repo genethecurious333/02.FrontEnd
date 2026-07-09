@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 함수 Arrow Function</title>
+    <script>
+        function sumFunc_1(num1, num2) {
+            return num1 + num2 ;
+        }
+
+        const sumFunc_2 = (n1, n2) => n1 + n2;
+        console.log(sumFunc_2(100, 200));
+
+        // return문을 생략할수 없는 화살표함수
+        const sumFunc_3 = (n1, n2) => {
+            const result = `${n1} + ${n2} = ${n1 + n2}`;
+            return result;
+        }
+        console.log(sumFunc_3(10, 20));
+
+        // 파라미터가 있고 리턴문이 하나있는 유형
+        const sumFunc_4 = (info1, info2) => (
+            {"name" : info1, "age" : info2}
+        )
+        console.log(sumFunc_4("홍길동", 25));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전개연산과 구조분해할당</title>
+    <script>
+        const users = {
+            "userA": [50, 60, 70],
+            "userB": [60, 70, 80],
+            "userC": [80, 90, 100]
+        }
+        // 구조분해 할당
+        const {userA, userB} = users;
+        console.log(userA, userB);
+
+        // 전개 연산
+        const arr = [...userA, ...userB]
+        console.log(arr);
+
+        let sum = 0;
+        for (score of arr) {
+            sum += score;
+        }
+
+        console.log(`userA와 userB의 총점: ${sum}`);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

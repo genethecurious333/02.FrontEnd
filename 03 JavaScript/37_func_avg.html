@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 입력을 받아 평균을 구하는 함수</title>
+    <script>
+        function testAvg(arrData) {
+            let sum = 0;
+            for (subject of arrData) {
+                sum += Number(prompt(subject + "점수는?", "0"));
+            }
+
+            const avg = sum / arrData.length;
+            return avg;
+        }
+
+        const arrSubject = ["국어", "수학", "영어"];
+        const avg = testAvg(arrSubject);
+        document.write("평균 점수는 ", Math.round(avg), "  점입니다.");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

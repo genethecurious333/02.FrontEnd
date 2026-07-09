@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 처리와 돔 조작하기</title>
+    <style>
+        .box {
+            padding: 20px;
+            margin: 10px;
+            background: #3498db;
+            color: white;
+        }
+    </style>
+
+</head>
+<body>
+    <h1 id="main-title">Dom 조작 실습</h1>
+    <button id="changeBtn">제목 바꾸기</button>
+    <button id="addBtn">박스 추가하기</button>
+
+    <script>
+        // 요소선택
+        const title = document.querySelector("#main-title");
+        const changeBtn = document.querySelector("#changeBtn");
+        const addBtn = document.querySelector("#addBtn");
+
+        console.log(title);
+        console.log(changeBtn);
+        console.log(addBtn);
+
+        // 이벤트 등록 및 Dom 조작
+        changeBtn.addEventListener('click', () => {
+            title.textContent = "제목이 바뀌었어요!";
+            title.style.color = "#e74c3c";
+        });
+
+        addBtn.addEventListener('click', () => {
+            const newBox = document.createElement('div');
+            newBox.classList.add("box");
+            newBox.textContent = "추가된 박스";
+            document.body.appendChild(newBox);
+        });
+        
+    </script>
+</body>
+</html>

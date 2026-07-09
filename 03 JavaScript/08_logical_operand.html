@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교/논리 연산자</title>
+    <script>
+        const a = 10;
+        const b = 20;
+        const m = 30;
+        const n = 40;
+        let result;
+
+        result = a > b || b >= m || m > n;
+        document.write(result, "<hr>")
+        result = a > b || b >= m || m <= n; 
+        document.write(result, "<hr>")
+        result = a <= b && b >= m && m <= n;
+        document.write(result, "<hr>")
+        result = a <= b && b <= m && m <= n; 
+        document.write(result, "<hr>")
+        result = !(a > b)
+        document.write(result, "<hr>")
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

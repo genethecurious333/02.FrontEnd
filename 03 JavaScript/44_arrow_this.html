@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow함수의 this 사용 문제</title>
+    
+</head>
+<body>
+    <!-- (p>button.btn-1) * 2 -->
+    <p><button class="btn-1">BUTTON1</button></p>
+    <p><button class="btn-2">BUTTON2</button></p>
+
+    <script>
+        const obj_1 = {
+            name : "홍길동", 
+            infoFunc: function() {
+                console.log(this);
+                const innerFunc = () => {
+                    console.log("메소드 내부함수:", this);
+                }
+                innerFunc();
+            }
+        }
+
+        obj_1.infoFunc();
+
+        const obj_2 = {
+            name : "홍길순",
+            infoFunc: () => {
+                console.log(this);
+                const innerFunc = () => {
+                    console.log("화살표 함수의 내부함수:", this)
+                }
+                innerFunc();
+            }
+
+        }
+
+        obj_2.infoFunc();
+    </script>
+    
+</body>
+</html>

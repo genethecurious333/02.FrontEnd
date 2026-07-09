@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>날짜 객체</title>
+    <script>
+        const today = new Date();
+        const nowMonth = today.getMonth() +1;
+        const nowDate = today.getDate();
+        const nowDay = today.getDay();
+        console.log(today);
+        console.log(nowMonth, nowDate, nowDay);
+        
+        const worldcup = new Date(2002, 4, 31);
+        const theMonth = worldcup.getMonth() + 1;
+        const theDate = worldcup.getDate();
+        const theDay = worldcup.getDay();
+        console.log(worldcup);
+        console.log(theMonth, theDate, theDay);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

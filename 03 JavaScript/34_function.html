@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 기본</title>
+    <script>
+        let count = 0;
+        myFunc();
+        // 함수 정의문을 이용한 함수선언
+
+        function myFunc() {
+            count++;
+            document.write("Hello", count, "<hr>");
+        }
+
+        myFunc();
+        
+        // 익명함수를 변수에 참조한 선언
+        const theFunc = function() {
+            count++;
+            document.write("bye", count, "<hr>");
+        }
+
+        theFunc();
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

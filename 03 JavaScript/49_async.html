@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동기화, 비동기화</title>
+    <script>
+        console.log("==== 동기방식으로 라면 끊이기 ====")
+        console.log("1. 편의점 가서 라면을 산다");
+        console.log("2. 물 끊이기");
+        console.log("3. 라면넣기 ");
+        console.log("4. 맛있게 먹기");
+        console.log("5. 끝~~");
+
+        console.log("==== 비동기방식으로 라면 끊이기 ====")
+        console.log("1. 편의점 가서 라면을 산다");
+        console.log("2. 물 끊이기");
+        // 1초 대기후에 라면넣기 실행시킴
+        setTimeout(() => console.log("3. 라면넣기"), 1000);
+       // console.log("3. 라면넣기 ");
+        console.log("4. 맛있게 먹기");
+        console.log("5. 끝~~");        
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for반복문</title>
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            if (i == 6) {
+                break;
+            }
+            if (i == 3) {
+                continue; // 3이면 건너뛰기
+            }
+            for (let j = 1; j <= 5; j++) {
+               document.write("반복" + i + ", "+ j + "<hr>") 
+            }
+            document.write("<br>")           
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
